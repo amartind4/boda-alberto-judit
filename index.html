@@ -5,18 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Invitación Boda</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 2rem; }
-    input { padding: 0.5rem; font-size: 1rem; }
-    button { padding: 0.5rem 1rem; font-size: 1rem; margin-top: 1rem; }
-    .error { color: red; margin-top: 1rem; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 2rem;
+      background-image: url('fondo.jpeg'); /* Aquí va tu imagen */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.5); /* oscurece un poco para legibilidad */
+      padding: 2rem;
+      border-radius: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    button {
+      background-color: #d8b38c; /* Beige */
+      color: white;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .error {
+      color: #ffcccc;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
-  <h2>Introduce tu contraseña personalizada</h2>
-  <input type="password" id="password" placeholder="Contraseña" />
-  <br/>
-  <button onclick="checkPassword()">Entrar</button>
-  <p id="error" class="error"></p>
+  <div class="container">
+    <h1>¡NOS ENCANTARÍA QUE FORMÉIS PARTE DE ESTE DÍA TAN ESPECIAL!</h1>
+    <p>Ingresa tu código para continuar</p>
+    <input type="password" id="password" placeholder="Código personalizado" />
+    <br/>
+    <button onclick="checkPassword()">VER INVITACIÓN</button>
+    <p id="error" class="error"></p>
+  </div>
 
   <script>
     const passwords = {
@@ -27,13 +79,13 @@
     };
 
     function checkPassword() {
-      const input = document.getElementById("password").value;
+      const input = document.getElementById("password").value.trim();
       const error = document.getElementById("error");
 
       if (passwords[input]) {
         window.location.href = passwords[input];
       } else {
-        error.textContent = "Contraseña incorrecta. Intenta de nuevo.";
+        error.textContent = "Código incorrecto. Intenta de nuevo.";
       }
     }
   </script>
