@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación Boda</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2rem; }
+    input { padding: 0.5rem; font-size: 1rem; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; margin-top: 1rem; }
+    .error { color: red; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h2>Introduce tu contraseña personalizada</h2>
+  <input type="password" id="password" placeholder="Contraseña" />
+  <br/>
+  <button onclick="checkPassword()">Entrar</button>
+  <p id="error" class="error"></p>
+
+  <script>
+    const passwords = {
+      "CarolVictor26": "https://albermd4.wixsite.com/boda-alberto-y-judit",
+      "Tito26": "https://albermd4.wixsite.com/boda-alberto-y-judit",
+      "raulysilvia": "https://albermd4.wixsite.com/boda-alberto-y-judit"
+      // Agrega más aquí
+    };
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const error = document.getElementById("error");
+
+      if (passwords[input]) {
+        window.location.href = passwords[input];
+      } else {
+        error.textContent = "Contraseña incorrecta. Intenta de nuevo.";
+      }
+    }
+  </script>
+</body>
+</html>
