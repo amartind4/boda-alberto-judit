@@ -4,17 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Invitación de Boda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: url('fondo2.jpeg') no-repeat center center fixed;
       background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: #3c2e2a;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      text-align: center;
     }
 
     .overlay {
@@ -59,12 +69,16 @@
       text-decoration: none;
       display: inline-block;
     }
+    
+    button:hover {
+      background-color: #c89c72; /* Tono más oscuro al pasar el cursor */
+    }
   </style>
 </head>
 <body>
   <div class="overlay">
     <h1>PAPÁ & MAMÁ</h1>
-    <p>¡Esperamos que puedan compartir<br>esta fiesta junto a nosotros!</p>
+    <p>¡Esperamos que podáis compartir<br>este día tan especial junto a nosotros!</p>
     <p class="invitados">Nº DE INVITADOS:</p>
     <p class="numero">2</p>
     <a class="boton" href="https://albermd4.wixsite.com/boda-alberto-y-judit" target="_blank">ABRIR INVITACIÓN</a>
