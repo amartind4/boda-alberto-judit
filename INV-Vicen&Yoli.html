@@ -12,12 +12,14 @@
            url('fonts/alexbrush-regular-webfont.woff') format('woff');
       font-weight: normal;
       font-style: normal;
-      }
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -43,16 +45,12 @@
       width: 90%;
     }
 
-    h1 {
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    
     .nombres {
       font-family: 'Alex Brush', cursive;
-      font-size: 2.4rem;
+      font-size: 8vw; /* Tamaño fluido: 8% del ancho de la ventana */
       font-weight: normal;
+      line-height: 1.2;
+      margin-bottom: 1rem;
     }
 
     p {
@@ -82,9 +80,9 @@
       text-decoration: none;
       display: inline-block;
     }
-    
+
     button:hover {
-      background-color: #c89c72; /* Tono más oscuro al pasar el cursor */
+      background-color: #c89c72;
     }
   </style>
 </head>
