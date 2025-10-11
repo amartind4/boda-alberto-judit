@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación de Boda</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
+
+    * {
+      margin: 0;
+@@ -14,115 +14,111 @@
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('fondo2.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #3c2e2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.75);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1.5s ease-in-out;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      color: #4a2f2f;
+    }
+
+    p {
+      margin: 0.7rem 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .invitados {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      font-weight: 600;
+
+    }
+
+    .numero {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #704e3d;
+    }
+
+    .boton {
+      background-color: #d8b38c;
+      color: white;
+      border: none;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .boton:hover {
+      background-color: #c89c72;
+      transform: scale(1.05);
+    }
+
+    /* RSVP Form */
+    form {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    input, select {
+      padding: 0.6rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+
+
+
+
+
+
+    }
+
+    /* Confetti Animation */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #d8b38c;
+      animation: fall 3s linear infinite;
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      .boton { width: 100%; }
+
+    }
+  </style>
+</head>
+@@ -134,33 +130,20 @@
+
+  <div class="overlay">
+    <h1>Abuela Katy</h1>
+    <p>¡Esperamos que puedas compartir<br>este día tan especial junto a nosotros!</p>
+    <p class="invitados">Nº DE INVITADOS:</p>
+    <p class="numero">1</p>
+    <a class="boton" href="https://albermd4.wixsite.com/boda-alberto-y-judit" target="_blank">ABRIR INVITACIÓN</a>
+
+    <!-- RSVP Form -->
+    <form onsubmit="event.preventDefault(); alert('¡Gracias por confirmar!');">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <select name="asistencia" required>
+        <option value="">¿Vas a asistir?</option>
+        <option value="sí">Sí, asistiré</option>
+        <option value="no">No podré asistir</option>
+      </select>
+      <button class="boton" type="submit">Confirmar Asistencia</button>
+    </form>
+  </div>
+
+  <!-- Confetti Elements -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      let confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.animationDuration = 2 + Math.random() * 3 + 's';
+      confetti.style.backgroundColor = ['#d8b38c', '#f5e3ce', '#c89c72'][Math.floor(Math.random()*3)];
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
