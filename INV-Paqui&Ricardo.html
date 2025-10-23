@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación de Boda</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('fondo2.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #3c2e2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 1rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      animation: popIn 0.8s ease;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      color: #4a2f2f;
+    }
+
+    p {
+      margin: 0.7rem 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .invitados {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      font-weight: 600;
+    }
+
+    .numero {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #704e3d;
+    }
+
+    .boton {
+      background-color: #d8b38c;
+      color: white;
+      border: none;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .boton:hover {
+      background-color: #c89c72;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    /* Responsive para pantallas más pequeñas */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .overlay {
+        padding: 2rem 1.5rem;
+      }
+
+      .boton {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Paqui & Ricardo</h1>
+    <p>¡Esperamos que podáis compartir<br>este día tan especial junto a nosotros!</p>
+    <p class="invitados">Nº DE INVITADOS:</p>
+    <p class="numero">2</p>
+    <a class="boton" href="https://albermd4.wixsite.com/boda-alberto-y-judit" target="_blank">ABRIR INVITACIÓN</a>
+  </div>
+</body>
+</html>
